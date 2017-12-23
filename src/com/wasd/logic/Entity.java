@@ -21,7 +21,21 @@ public class Entity {
     }
 
     public void calculateFutureStep(float stepSize) {
-        nextPosition = StepTowardsPosition.step(position, desiredPosition(), stepSize);
+        Float2 destination = desiredPosition();
+        boundary(destination);
+        stepSize *= slowerWhenFarAway(position);
+        nextPosition = StepTowardsPosition.step(position, destination, stepSize);
+    }
+
+    private static float slowerWhenFarAway(Float2 pos) {
+        return (float) (1 / Math.exp(pos.length()));
+    }
+
+    private static void boundary(Float2 destination) {
+        float boundary = 3f;
+        if (destination.length() > boundary) {
+            destination.normalizeMutate().multiplyMutate(boundary);
+        }
     }
 
     public void applyFutureStep() {
