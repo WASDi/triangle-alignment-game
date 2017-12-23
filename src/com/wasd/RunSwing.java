@@ -22,7 +22,7 @@ public class RunSwing {
         window.setBounds(400, 10, 1000, 1000);
         window.setMinimumSize(new Dimension(300, 300));
 
-        World world = new World(World.NUM_ENTITIES);
+        World world = new World(Settings.NUM_ENTITIES);
         GraphicsPanel graphics = new GraphicsPanel(world);
 
         JSlider stepSizeSlider = new JSlider(1, 200);

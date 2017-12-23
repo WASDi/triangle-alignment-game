@@ -1,5 +1,6 @@
 package com.wasd.render_to_file;
 
+import com.wasd.Settings;
 import com.wasd.graphics.CoordinateTranslation;
 import com.wasd.logic.World;
 import com.wasd.util.Int2;
@@ -13,7 +14,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.wasd.graphics.CoordinateTranslation.ENTITY_RENDER_SIZE;
+import static com.wasd.Settings.ENTITY_RENDER_SIZE;
 
 public class DrawFullPath {
 
@@ -26,7 +27,7 @@ public class DrawFullPath {
         StopWatch stopWatch = new StopWatch();
         CoordinateTranslation coordinateTranslation = new CoordinateTranslation();
         coordinateTranslation.onResize(new Dimension(IMAGE_SIZE, IMAGE_SIZE));
-        World world = new World(World.NUM_ENTITIES);
+        World world = new World(Settings.NUM_ENTITIES);
 
         List<EntityImageWrapper> entities = new ArrayList<>(ENTITIES_TO_RENDER);
 

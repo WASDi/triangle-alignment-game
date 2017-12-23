@@ -5,11 +5,10 @@ import com.wasd.util.Int2;
 
 import java.awt.Dimension;
 
-public class CoordinateTranslation {
+import static com.wasd.Settings.ENTITY_RENDER_SIZE;
+import static com.wasd.Settings.RENDER_SCALE;
 
-    public static final int RENDER_SCALE = 120;
-    public static final int ENTITY_RENDER_SIZE = 4;
-    public static final float PICK_SIZE = (0.5f * (ENTITY_RENDER_SIZE + 10)) / RENDER_SCALE;
+public class CoordinateTranslation {
 
     private float centerX;
     private float centerY;
