@@ -6,12 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import static com.wasd.Settings.SUBSTEPS;
+
 public class World {
-
-    public static final int NUM_ENTITIES = 60;
-    public static final float BOUNDARY = 4f;
-
-    private static final int SUBSTEPS = 1;
 
     private final List<Entity> entities = new ArrayList<>();
     private final int numEntities;

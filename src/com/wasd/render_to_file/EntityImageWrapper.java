@@ -8,7 +8,7 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
-import static com.wasd.graphics.CoordinateTranslation.ENTITY_RENDER_SIZE;
+import static com.wasd.Settings.ENTITY_RENDER_SIZE;
 
 public class EntityImageWrapper {
 

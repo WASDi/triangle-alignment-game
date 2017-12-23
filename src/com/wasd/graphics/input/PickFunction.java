@@ -1,5 +1,6 @@
 package com.wasd.graphics.input;
 
+import com.wasd.Settings;
 import com.wasd.graphics.CoordinateTranslation;
 import com.wasd.logic.Entity;
 import com.wasd.logic.World;
@@ -7,9 +8,9 @@ import com.wasd.util.Float2;
 
 import java.awt.event.MouseEvent;
 
-import static com.wasd.graphics.CoordinateTranslation.PICK_SIZE;
-
 public class PickFunction {
+
+    private static final float PICK_SIZE = (0.5f * (Settings.ENTITY_RENDER_SIZE + 10)) / Settings.RENDER_SCALE;
 
     public static Entity pick(MouseEvent e, CoordinateTranslation coordinateTranslation, World world) {
         Float2 mousePos = coordinateTranslation.windowToEntity(e.getX(), e.getY());

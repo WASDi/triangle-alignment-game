@@ -12,7 +12,7 @@ import java.awt.Graphics;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 
-import static com.wasd.graphics.CoordinateTranslation.ENTITY_RENDER_SIZE;
+import static com.wasd.Settings.ENTITY_RENDER_SIZE;
 
 public class GraphicsPanel extends JPanel {
 

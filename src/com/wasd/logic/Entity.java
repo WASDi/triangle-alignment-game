@@ -1,5 +1,6 @@
 package com.wasd.logic;
 
+import com.wasd.Settings;
 import com.wasd.logic.functions.CompleteTriangleFunction;
 import com.wasd.logic.functions.StepTowardsPosition;
 import com.wasd.util.Float2;
@@ -33,8 +34,8 @@ public class Entity {
 
     private static void boundary(Float2 destination) {
         float length = destination.length();
-        if (length > World.BOUNDARY) {
-            destination.multiplyMutate(World.BOUNDARY / length);
+        if (length > Settings.WORLD_BOUNDARY) {
+            destination.multiplyMutate(Settings.WORLD_BOUNDARY / length);
         }
     }
 
