@@ -25,7 +25,8 @@ public class World {
         entities.clear();
 
         for (int i = 0; i < numEntities; i++) {
-            entities.add(new Entity(r.nextFloat(), r.nextFloat()));
+            entities.add(new Entity(r.nextFloat() - .5f,
+                                    r.nextFloat() - .5f));
         }
         AssignDistinctTargets.apply(r, entities);
     }
