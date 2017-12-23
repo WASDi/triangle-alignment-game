@@ -16,8 +16,8 @@ public class CoordinateTranslation {
     private int height;
 
     public Int2 entityToWindow(Float2 pos) {
-        float x = centerX + pos.x * RENDER_SCALE - ENTITY_RENDER_SIZE / 2f - RENDER_SCALE / 2f;
-        float y = centerY + pos.y * RENDER_SCALE - ENTITY_RENDER_SIZE / 2f - RENDER_SCALE / 2f;
+        float x = centerX + pos.x * RENDER_SCALE - ENTITY_RENDER_SIZE / 2f;
+        float y = centerY + pos.y * RENDER_SCALE - ENTITY_RENDER_SIZE / 2f;
 
         return new Int2(x, height - y);
     }
@@ -27,8 +27,8 @@ public class CoordinateTranslation {
     }
 
     public Float2 windowToEntity(int windowX, int windowY) {
-        float entityX = (RENDER_SCALE / 2f + ENTITY_RENDER_SIZE / 2f - centerX + windowX) / RENDER_SCALE;
-        float entityY = (RENDER_SCALE / 2f + ENTITY_RENDER_SIZE / 2f - centerY - windowY + height) / RENDER_SCALE;
+        float entityX = (ENTITY_RENDER_SIZE / 2f - centerX + windowX) / RENDER_SCALE;
+        float entityY = (ENTITY_RENDER_SIZE / 2f - centerY - windowY + height) / RENDER_SCALE;
 
         return new Float2(entityX, entityY);
     }
