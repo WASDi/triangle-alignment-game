@@ -7,8 +7,8 @@ import java.awt.Dimension;
 
 public class CoordinateTranslation {
 
-    public static final int RENDER_SCALE = 200;
-    public static final int ENTITY_RENDER_SIZE = 7;
+    public static final int RENDER_SCALE = 120;
+    public static final int ENTITY_RENDER_SIZE = 4;
     public static final float PICK_SIZE = (0.5f * (ENTITY_RENDER_SIZE + 10)) / RENDER_SCALE;
 
     private float centerX;

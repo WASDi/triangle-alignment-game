@@ -28,6 +28,7 @@ public class GraphicsPanel extends JPanel {
         addMouseListener(mouseWrapper);
         addMouseMotionListener(mouseWrapper);
         addComponentListener(new ResizeListener());
+        setBackground(Color.WHITE);
     }
 
     @Override
