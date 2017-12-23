@@ -32,9 +32,9 @@ public class Entity {
     }
 
     private static void boundary(Float2 destination) {
-        float boundary = 3f;
-        if (destination.length() > boundary) {
-            destination.normalizeMutate().multiplyMutate(boundary);
+        float length = destination.length();
+        if (length > World.BOUNDARY) {
+            destination.multiplyMutate(World.BOUNDARY / length);
         }
     }
 

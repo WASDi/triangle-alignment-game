@@ -8,9 +8,10 @@ import java.util.Random;
 
 public class World {
 
-    public static final int NUM_ENTITIES = 8;
+    public static final int NUM_ENTITIES = 60;
+    public static final float BOUNDARY = 4f;
 
-    private static final int SUBSTEPS = 10;
+    private static final int SUBSTEPS = 1;
 
     private final List<Entity> entities = new ArrayList<>();
     private final int numEntities;
@@ -48,5 +49,9 @@ public class World {
             }
         }
 
+    }
+
+    public Entity getEntity(int i) {
+        return entities.get(i);
     }
 }

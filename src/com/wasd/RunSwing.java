@@ -10,7 +10,6 @@ import javax.swing.JSlider;
 import javax.swing.Timer;
 import javax.swing.WindowConstants;
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 
@@ -20,12 +19,11 @@ public class RunSwing {
         JFrame window = new JFrame("Triangle alignment game");
         window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         window.setLayout(new BorderLayout());
-        window.setBounds(400, 100, 900, 800);
+        window.setBounds(400, 10, 1000, 1000);
         window.setMinimumSize(new Dimension(300, 300));
 
         World world = new World(World.NUM_ENTITIES);
         GraphicsPanel graphics = new GraphicsPanel(world);
-        graphics.setBackground(Color.WHITE);
 
         JSlider stepSizeSlider = new JSlider(1, 200);
         JButton playButton = new JButton("Play ►");
